@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import './login.css';
+import { useNavigate } from 'react-router-dom';
+
 
 function Login() {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -16,34 +20,26 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Your submit logic here
- 
-  const {email, password} =formData;
-if(!email || !password){
-  alert('Please fill out all fields')
-  return;
-}
+    const { email, password } = formData;
 
-setLoading(true);
+    if (!email || !password) {
+      alert('Please fill out all fields');
+      return;
+    }
 
-setTimeout(()=>{
-  setLoading(false);
+    setLoading(true);
 
-  if(email === 'admin@gmail.com' && password ==='password'){
-  alert('Login Successful!');
-window.location.href='/admin';
+    setTimeout(() => {
+      setLoading(false);
 
-} else {
-  alert('Invalid email or Password');
-}
-},2000
-
-);
+      if (email === 'admin@gmail.com' && password === 'password') {
+        alert('Login Successful!');
+        navigate('/admin'); // Use history.push for navigation
+      } else {
+        alert('Invalid email or Password');
+      }
+    }, 2000);
   };
-
-
-
-
 
   return (
     <section>
@@ -73,8 +69,7 @@ window.location.href='/admin';
               />
             </div>
             <button className='login-button' onClick={handleSubmit}>
-            {loading ? 'Logging In...' : 'Login'}
-
+              {loading ? 'Logging In...' : 'Login'}
             </button>
           </div>
         </div>
@@ -85,4 +80,3 @@ window.location.href='/admin';
 }
 
 export default Login;
-

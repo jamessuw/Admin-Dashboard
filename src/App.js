@@ -1,16 +1,15 @@
 import React from 'react';
-import './App.css';
-import Login from './Login/Login';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import { BrowserRouter as Router, Route, Redirect, Routes } from 'react-router-dom';
+import Login from './Components/Login/Login'; // Check the correct path to your Login component
+import AdminDash from './Components/AdminDash/AdminDash'; 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Routes>
-          <Route path='/' element={<Login />} />
-        </Routes>
-      </div>
+      <Routes>
+    
+      <Route path="login" element={<Login />} />
+        <Route path="admin" element={<AdminDash />} />
+  </Routes>
     </Router>
   );
 }
