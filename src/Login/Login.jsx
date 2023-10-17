@@ -7,6 +7,8 @@ function Login() {
     password: ''
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -15,10 +17,33 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Your submit logic here
+ 
+  const {email, password} =formData;
+if(!email || !password){
+  alert('Please fill out all fields')
+  return;
+}
 
+setLoading(true);
 
-    
+setTimeout(()=>{
+  setLoading(false);
+
+  if(email === 'admin@gmail.com' && password ==='password'){
+  alert('Login Successful!');
+window.location.href='/admin';
+
+} else {
+  alert('Invalid email or Password');
+}
+},2000
+
+);
   };
+
+
+
+
 
   return (
     <section>
@@ -48,7 +73,8 @@ function Login() {
               />
             </div>
             <button className='login-button' onClick={handleSubmit}>
-              Login
+            {loading ? 'Logging In...' : 'Login'}
+
             </button>
           </div>
         </div>
