@@ -34,13 +34,14 @@
     
 
 }
-.container-input input{
-            width: 100%;
-            border-radius: 10px;
-            height: 35px;
-            background-color: #e9e9e9ed;
-            border:0;
-        
+.container-input input {
+        width: 100%;
+        border-radius: 10px;
+        height: 35px;
+        background-color: #e9e9e9ed;
+        border: 0;
+        padding: 5px;
+    
     
 }
 .login-button{

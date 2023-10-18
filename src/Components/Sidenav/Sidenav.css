@@ -1,0 +1,63 @@
+
+.user-icon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 8%;
+    margin-top: 3rem;
+    color: #f5f5f5;
+    justify-content: flex-start;
+    margin-left: 1rem;
+ 
+}
+.user-icon{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+}
+.side-nav-container {
+    margin: 0;
+    padding: 0;
+    width: 400px;
+    background-color: #4285F4;
+    overflow: auto;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    position: fixed;
+    height: 100%;
+    flex-direction: column;
+}
+
+.container-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: auto;
+    margin: 1rem;
+    padding: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+
+}
+
+.container-link :active{
+    background-color: #f5f5f5;
+    
+}
+
+.container-link :nth-child(){
+    background-color: #f5f5f5;
+}
+.container-link a {
+    height: 40px;
+    margin-left: 0;
+    width: 100%;
+    margin-right: 0;
+    padding: 15px;
+    position: relative;
+    right: 17px;
+    color: #ffff;
+}

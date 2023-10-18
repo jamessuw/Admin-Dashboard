@@ -1,11 +1,11 @@
 import React from 'react'
-
+import Sidenav from '../Sidenav/Sidenav'
 
 
 function AdminDash() {
   return (
     <div>
-      test
+      <Sidenav/>
     </div>
   )
 }
