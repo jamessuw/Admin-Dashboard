@@ -1,0 +1,28 @@
+.header-dash {
+    display: block;
+    /* width: -webkit-fill-available; */
+    height: 65px;
+    background-color: #f5f5f5;
+    padding: 1em 6em;
+  
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 0.95px 5.6px;
+    
+
+}
+.search-bar {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+}
+.search-bar input {
+        height: 0;
+        width: 180px;
+        
+    
+}
+.search-bar input {
+    height: 0;
+    width: 180px;
+    margin-top: auto;
+    margin-bottom: auto;
+}

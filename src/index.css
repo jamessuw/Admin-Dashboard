@@ -23,3 +23,11 @@ h4{
   font-weight: 400;
 
 }
+input {
+  background: white;
+	border: 1px solid #ddd;
+	border-radius: 100px;
+	padding: 20px;
+	color: #505060;
+	box-shadow: 0 3px 7px 0 rgba(0,0,0,.15);
+}

@@ -1,12 +1,17 @@
 import React from 'react'
 import Sidenav from '../Sidenav/Sidenav'
+import HeaderDash from '../Header/HeaderDash'
+import'./adminDash.css'
 
 
 function AdminDash() {
   return (
-    <div>
+    <section className='dashboard-body'>
+      
       <Sidenav/>
-    </div>
+      <HeaderDash/>
+
+    </section>
   )
 }
 
