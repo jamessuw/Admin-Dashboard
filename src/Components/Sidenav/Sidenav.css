@@ -19,7 +19,6 @@
   }
   
   .side-nav-container {
-    border-top-right-radius: !important;
     padding: 0;
     width: 400px;
     height: 100%;
@@ -31,6 +30,7 @@
     flex-direction: column;
     opacity: 0.98;
     position: fixed;
+    z-index: 9999;
 
   }
   

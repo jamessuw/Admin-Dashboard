@@ -23,8 +23,10 @@ function CreateForm() {
   <Sidenav/>
     </div>
    
+   <div className='form-section-ctr'>
+   
    <div className='form-section'>
-
+ <h1>Purchase Order</h1>
    <form onSubmit={handleSubmit}>
       <label>
         PO Number:
@@ -44,7 +46,7 @@ function CreateForm() {
       <button type="submit">Submit</button>
     </form>
    </div>
-   
+   </div>
 
     </section>
   )
