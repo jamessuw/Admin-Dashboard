@@ -10,7 +10,7 @@ function App() {
       <Routes>
     
       <Route path="login" element={<Login />} />
-        <Route path="admin" element={<AdminDash />} />
+        <Route path="/admin" element={<AdminDash />} />
         
 {/* This is Side Nav Routes render APP */}
 

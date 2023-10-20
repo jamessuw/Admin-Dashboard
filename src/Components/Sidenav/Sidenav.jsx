@@ -26,6 +26,9 @@ function Sidenav() {
                 </button>
 
                 <div className={`dropdown-content ${isOpen ? 'show' : ''}`}>
+                <Link to="/admin"> {/* Navigate to the appropriate route */}
+                        <h4>Overview</h4>
+                    </Link>
                 <Link to="/sales-record"> {/* Navigate to the appropriate route */}
                         <h4>Sales Record</h4>
                     </Link>
