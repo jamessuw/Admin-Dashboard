@@ -5,7 +5,7 @@
     background-color: #f5f5f5;
     padding: 1em 6em;
   
-        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 0.95px 5.6px;
+        box-shadow: rgba(0, 0, 0, 0) 1.95px 0.95px 5.6px;
     
 
 }
@@ -25,4 +25,13 @@
     width: 180px;
     margin-top: auto;
     margin-bottom: auto;
+}
+.search-input {
+ 
+ 
+    background-image: url('../../assets/icons/search.svg'); /* Updated path */
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    
 }

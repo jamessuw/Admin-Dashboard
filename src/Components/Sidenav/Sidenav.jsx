@@ -1,5 +1,8 @@
 import './Sidenav.css';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+
+
 
 function Sidenav() {
     const [isOpen, setIsOpen] = useState(false);
@@ -23,18 +26,21 @@ function Sidenav() {
                 </button>
 
                 <div className={`dropdown-content ${isOpen ? 'show' : ''}`}>
-                    <a href="">
+                <Link to="/sales-record"> {/* Navigate to the appropriate route */}
                         <h4>Sales Record</h4>
-                    </a>
-                    <a href="">
+                    </Link>
+                    <Link to="/purchase-order">
                         <h4>Purchase Order</h4>
-                    </a>
-                    <a href="">
+                    </Link>
+                    <Link to="/client">
                         <h4>Client</h4>
-                    </a>
-                    <a href="">
-                        <h4>User Profle</h4>
-                    </a>
+                    </Link>
+                    <Link to="/user-profile">
+                        <h4>User Profile</h4>
+                    </Link>
+                    <Link to="/create-form"> {/* Navigate to the Create Form route */}
+                        <h4>Create Form</h4>
+                    </Link>
                 </div>
             </div>
         </div>

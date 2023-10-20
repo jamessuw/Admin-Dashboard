@@ -1,0 +1,21 @@
+.form-component{
+    display: flex;
+}
+.form-container{
+    display: block;
+    height: 100vh;
+}
+.form-section {
+    display: flex;
+    height: 500px;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    /* top: 100%; */
+    align-items: center;
+    margin: auto;
+}
+.form-section label{
+    display: flex;
+    flex-direction: column;
+}

@@ -19,18 +19,19 @@
   }
   
   .side-nav-container {
-    margin: 0;
+    border-top-right-radius: !important;
     padding: 0;
     width: 400px;
     height: 100%;
     background-color: #4285F4;
     overflow: auto;
-    border-top-right-radius: 20px;
+    border-top-right-radius: 5px;
     border-bottom-right-radius: 20px;
     display: flex;
     flex-direction: column;
     opacity: 0.98;
     position: fixed;
+
   }
   
   .container-link {
