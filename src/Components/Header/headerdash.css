@@ -1,13 +1,12 @@
 .header-dash {
     display: block;
-    /* width: -webkit-fill-available; */
+    width: -webkit-fill-available;
     height: 65px;
     background-color: #f5f5f5;
     padding: 1em 6em;
-  
-        box-shadow: rgba(0, 0, 0, 0) 1.95px 0.95px 5.6px;
-    
-
+    box-shadow: rgba(0, 0, 0, 0) 1.95px 0.95px 5.6px;
+    position: absolute;
+    /* width: 100vw; */
 }
 .search-bar {
     display: flex;
