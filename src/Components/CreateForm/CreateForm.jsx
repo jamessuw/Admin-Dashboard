@@ -17,8 +17,29 @@ function CreateForm() {
   <Sidenav/>
     </div>
    
-   <div className='form-section-ctr'>
-   
+
+   <div className='container-2'>
+   <div className='create-form'><button>Create Form</button></div>
+   <div className='table-container'>
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>unit</th>
+            <th>Unit price</th>
+            <th>total price</th>
+        </tr>
+        <tr>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+        </tr>
+    </table>
+   </div>
    
 
    
