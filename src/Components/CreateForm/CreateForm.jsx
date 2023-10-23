@@ -8,7 +8,11 @@ import HeaderDash from '../Header/HeaderDash';
 
 function CreateForm() {
 
-  
+    const [showPopUp, setShowPopUp] = useState(false);
+
+    const togglePopUp = () => {
+      setShowPopUp(!showPopUp);
+    };
 
   return (
  <section className='form-component'>
@@ -19,7 +23,12 @@ function CreateForm() {
    
 
    <div className='container-2'>
-   <div className='create-form'><button>Create Form</button></div>
+
+   <div className='create-form'>
+   <button onClick={togglePopUp}>Create Form</button>
+    </div>
+
+
    <div className='table-container'>
     <table>
         <tr>
@@ -45,6 +54,17 @@ function CreateForm() {
    
   
    </div>
+   <div className='pop-up-create-form'>
+   {showPopUp && (
+          <div className='modal-overlay'>
+            <div className='modal'>
+              <span className='close' onClick={togglePopUp}>&times;</span>
+              <h2>Create Form Pop-up Content</h2>
+              {/* Additional form elements can be added here */}
+            </div>
+          </div>
+)}
+     </div>
 
     </section>
   )
