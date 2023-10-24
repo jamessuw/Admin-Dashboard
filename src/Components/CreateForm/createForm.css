@@ -80,6 +80,9 @@ table {
   tr:nth-child(even) {
     background-color: #dddddd;
   }
+
+  /* pop up code css  */
+  
   .pop-up-create-form {
     display: block;
     margin: auto;
