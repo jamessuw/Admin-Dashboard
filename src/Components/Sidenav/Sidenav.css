@@ -1,3 +1,54 @@
+.side-nav-container {
+  /* ... */
+  transition: left 0.3s ease-in-out; /* Apply easing to the side navigation */
+}
+
+.side-nav-container.visible {
+  left: 0;
+}
+
+.side-nav-container.hidden {
+  left: -350px; /* Set an appropriate negative value to hide the side nav */
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #3d81eb;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  margin: 3px 0;
+  background-color: #fff;
+  transition: 0.4s;
+}
+
+.change.bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change.bar:nth-child(2) {
+  opacity: 0;
+}
+
+.change.bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+.toggle-button {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #3d81eb;
+  color: #fff;
+  text-align: center;
+}
+
+
+
 .user-icon-container {
   display: flex;
   flex-direction: row;

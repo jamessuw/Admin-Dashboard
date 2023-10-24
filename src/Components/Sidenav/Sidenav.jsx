@@ -10,9 +10,25 @@ function Sidenav() {
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
     };
+    const [isVisible, setIsVisible] = useState(true);
+
+    const toggleVisibility = () => {
+        setIsVisible(!isVisible);
+    };
+
 
     return (
-        <div className='side-nav-container'>
+        <div className={`side-nav-container ${isVisible ? 'visible' : 'hidden'}`}>
+        <div className='toggle-button' onClick={toggleVisibility}>
+        <div className='hamburger-menu' onClick={toggleVisibility}>
+                <div className={`bar ${isVisible ? 'change' : ''}`}></div>
+                <div className={`bar ${isVisible ? 'change' : ''}`}></div>
+                <div className={`bar ${isVisible ? 'change' : ''}`}></div>
+            </div>
+        </div>
+
+
+
             <div className='user-icon-container'>
                 <div className='user-icon'></div>
                 <span className='username'>
