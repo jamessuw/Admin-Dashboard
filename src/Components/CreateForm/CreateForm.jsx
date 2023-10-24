@@ -2,6 +2,7 @@ import Sidenav from '../Sidenav/Sidenav'
 import './createForm.css'
 import React, { useState } from 'react';
 import HeaderDash from '../Header/HeaderDash';
+import PurchaseOrderForm from './PurchaseOrderForm';
 
 
 
@@ -59,7 +60,7 @@ function CreateForm() {
           <div className='modal-overlay'>
             <div className='modal'>
               <span className='close' onClick={togglePopUp}>&times;</span>
-              <h2>Create Form Pop-up Content</h2>
+            <PurchaseOrderForm/>
               {/* Additional form elements can be added here */}
             </div>
           </div>
