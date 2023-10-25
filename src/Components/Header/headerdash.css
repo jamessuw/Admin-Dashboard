@@ -20,10 +20,11 @@
     
 }
 .search-bar input {
-    height: 0;
+    height: 20px;
     width: 180px;
     margin-top: auto;
     margin-bottom: auto;
+    padding: 5px;
 }
 .search-input {
  

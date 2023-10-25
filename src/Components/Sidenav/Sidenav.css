@@ -85,6 +85,7 @@
 
   }
   
+
   .container-link {
     display: flex;
     flex-direction: column;
@@ -102,6 +103,9 @@
     text-align: start;
     color: #ffffff;
     padding-left: 10px;
+  }
+  .dropdown-button h2{
+    color: #fff;
   }
   
   .dropdown-content {

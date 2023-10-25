@@ -38,7 +38,7 @@ function Sidenav() {
 
             <div className='container-link'>
                 <button className='dropdown-button' onClick={toggleDropdown}>
-                    <h2>Dashboard</h2>
+                    <h2 className='h2-nav'>Dashboard</h2>
                 </button>
 
                 <div className={`dropdown-content ${isOpen ? 'show' : ''}`}>
