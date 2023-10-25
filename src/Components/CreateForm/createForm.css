@@ -156,3 +156,13 @@ text-align: start;
 .items-container-popup {
     display: flex;
 }
+.PO-add{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: solid 0.5px grey;
+    padding: auto;
+   justify-content: center;
+
+}
