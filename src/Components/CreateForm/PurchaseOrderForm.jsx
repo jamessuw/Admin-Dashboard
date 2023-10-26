@@ -11,10 +11,13 @@ totalPrice: ""
 });
 
 const handleItemInputChange = (e) => {
-const { name, value } = e.target;
-setItem({ ...item, [name]: parseInt(value, 10) || "" });
-onInputChange({ ...item, [name]: parseInt(value, 10) || "" });
-};
+    const { name, value } = e.target;
+    const parsedValue = isNaN(value) ? value : parseInt(value, 10);
+  
+    setItem({ ...item, [name]: parsedValue });
+    onInputChange({ ...item, [name]: parsedValue });
+  };
+
 
 const handleSubmit = (e) => {
 e.preventDefault();
@@ -50,7 +53,8 @@ return (
                         </div>
                         <div className="label-input">
                             <label>Descriptions</label>
-                            <input></input>
+                            <input tyep="text" name="description" value={item.description} onChange={handleItemInputChange}
+                                placeholder="description"></input>
                         </div>
 
                         <div className="label-input">
