@@ -53,7 +53,7 @@ return (
                         </div>
                         <div className="label-input">
                             <label>Descriptions</label>
-                            <input tyep="text" name="description" value={item.description} onChange={handleItemInputChange}
+                            <input type="text" name="description" value={item.description} onChange={handleItemInputChange}
                                 placeholder="description"></input>
                         </div>
 
@@ -66,11 +66,13 @@ return (
                     <div className="conatiner-field-2">
                         <div className="label-input">
                             <label>Unit</label>
-                            <input></input></div>
+                            <input type="unit" name="unit" value={item.unit} onChange={handleItemInputChange}
+                                placeholder="unit"></input></div>
 
                         <div className="label-input">
                             <label>Cost per Unit</label>
-                            <input></input></div>
+                            <input type="costPerUnit" name="costPerUnit" value={item.costPerUnit} onChange={handleItemInputChange}
+                                placeholder="costPerUnit"></input></div>
 
                         <div className="label-input">
 
