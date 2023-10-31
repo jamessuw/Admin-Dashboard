@@ -41,22 +41,28 @@ return (
                 <thead>
                     <tr>
                         <th>No</th>
+                        <th>Date</th>
+                        <th>To</th>
                         <th>Description</th>
                         <th>Quantity</th>
                         <th>Unit</th>
                         <th>Cost per Unit</th>
                         <th>Total Price</th>
+
                     </tr>
                 </thead>
                 <tbody>
                     {formData.map((data, index) => (
                     <tr key={index}>
                         <td>{data.no}</td>
+                        <td>{data.date}</td>
+                        <td>{data.to}</td>
                         <td>{data.description}</td>
                         <td>{data.quantity}</td>
                         <td>{data.unit}</td>
                         <td>{data.costPerUnit}</td>
                         <td>{data.totalPrice}</td>
+
                     </tr>
                     ))}
                 </tbody>

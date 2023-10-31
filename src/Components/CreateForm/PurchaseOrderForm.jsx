@@ -7,7 +7,11 @@ description: "",
 quantity: "",
 unit: "",
 costPerUnit: "",
-totalPrice: ""
+totalPrice: "",
+date:"",
+id:"",
+to:"",
+
 });
 
 const handleItemInputChange = (e) => {
@@ -31,13 +35,16 @@ return (
         <h2>General Information</h2>
         <form onSubmit={handleSubmit}>
             <label>To</label>
-            <input></input>
+            <input type="to" name="to" value={item.to} onChange={handleItemInputChange}
+                                placeholder="to"></input>
 
             <label>ID Purchase Order</label>
-            <input></input>
+            <input type="id" name="id" value={item.id} onChange={handleItemInputChange}
+                                placeholder="id"></input>
 
             <label>Date</label>
-            <input></input>
+            <input type="number" name="date" value={item.date} onChange={handleItemInputChange}
+                                placeholder="date"></input>
 
             <label>Rechiver PO</label>
             <input></input>
