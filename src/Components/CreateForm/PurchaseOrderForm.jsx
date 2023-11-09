@@ -23,17 +23,40 @@ const handleItemInputChange = (e) => {
   };
 
 
-const handleSubmit = (e) => {
-e.preventDefault();
-onSubmit(); // Notify the parent component that the form is submitted
-};
+
+
+const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    try {
+      const response = await fetch('http://localhost:5000/api/save-purchase-order', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(item),
+      });
+  
+      if (response.ok) {
+        // Handle success response...
+      } else {
+        // Handle error response...
+      }
+    } catch (error) {
+      console.error('Error occurred while saving purchase order data:', error);
+    }
+  
+    // Notify the parent component that the form is submitted (if needed)
+    onSubmit();
+  };
+
 
 return (
 <div>
     <div className="PO-container">
         <h1>Purchase Order</h1>
         <h2>General Information</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} method="post" action="/save-data">
             <label>To</label>
             <input type="to" name="to" value={item.to} onChange={handleItemInputChange}
                                 placeholder="to"></input>
