@@ -1,56 +1,64 @@
 import { useState } from "react";
-
 function PurchaseOrderForm({ onInputChange, onSubmit }) {
-const [item, setItem] = useState({
-no: "",
-description: "",
-quantity: "",
-unit: "",
-costPerUnit: "",
-totalPrice: "",
-date:"",
-id:"",
-to:"",
-
-});
-
-const handleItemInputChange = (e) => {
-    const { name, value } = e.target;
-    const parsedValue = isNaN(value) ? value : parseInt(value, 10);
+    const [item, setItem] = useState({
+      no: "",
+      description: "",
+      quantity: "",
+      unit: "",
+      costPerUnit: "",
+      totalPrice: "",
+      date: "",
+      id: "",
+      to: "",
+    });
   
-    setItem({ ...item, [name]: parsedValue });
-    onInputChange({ ...item, [name]: parsedValue });
-  };
-
-
-
-
-const handleSubmit = async (e) => {
-    e.preventDefault();
+    const handleItemInputChange = (e) => {
+      const { name, value } = e.target;
+      const parsedValue = isNaN(value) ? value : parseInt(value, 10);
   
-    try {
-      const response = await fetch('http://localhost:5000/api/save-purchase-order', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(item),
-      });
+      setItem({ ...item, [name]: parsedValue });
+      onInputChange({ ...item, [name]: parsedValue });
+    };
   
-      if (response.ok) {
-        // Handle success response...
-      } else {
-        // Handle error response...
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+  
+      try {
+        const response = await fetch('http://localhost:5000/api/save-purchase-order', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(item),
+        });
+  
+        if (response.ok) {
+          // Handle success response...
+          console.log('Purchase order data saved successfully!');
+          setItem({
+            no: "",
+            description: "",
+            quantity: "",
+            unit: "",
+            costPerUnit: "",
+            totalPrice: "",
+            date: "",
+            id: "",
+            to: "",
+          });
+        } else {
+          // Handle error response...
+          console.error('Error:', response.statusText);
+          // Show an error message to the user
+        }
+      } catch (error) {
+        console.error('Error occurred while saving purchase order data:', error);
       }
-    } catch (error) {
-      console.error('Error occurred while saving purchase order data:', error);
-    }
   
-    // Notify the parent component that the form is submitted (if needed)
-    onSubmit();
-  };
-
-
+      // Notify the parent component that the form is submitted (if needed)
+      onSubmit();
+    };
+  
 return (
 <div>
     <div className="PO-container">
