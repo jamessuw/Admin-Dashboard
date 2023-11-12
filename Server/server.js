@@ -10,7 +10,7 @@ const app = express();
 const port = 5000;
 
 const corsOptions = {
-    origin: 'http://localhost:3000', // Update with your React app's URL
+    origin: 'http://localhost:5000', // Update with your React app's URL
     optionsSuccessStatus: 200,
   };
   
